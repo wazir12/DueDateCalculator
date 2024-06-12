@@ -63,6 +63,14 @@ public class DueDateCalculatorTest {
     }
 
     @Test
+    public void testLargeTurnAroundTime() {
+        LocalDateTime submitDateTime = LocalDateTime.of(2024, 6, 3, 14, 0);
+        int turnaroundHours = 18;
+        LocalDateTime expectedDueDate = LocalDateTime.of(2024, 6, 5, 16, 0);
+        assertEquals(expectedDueDate, calculator.calculateDueDate(submitDateTime, turnaroundHours));
+    }
+
+    @Test
     public void testHoliday() {
         LocalDateTime submitDateTime = LocalDateTime.of(2024, 6, 17, 14, 0); // Monday, 2 PM
         int turnaroundHours = 4;
