@@ -34,3 +34,9 @@ jobs:
 
     - name: Run tests
       run: mvn test
+      
+    - name: Upload JAR file
+      uses: actions/upload-artifact@v3
+      with:
+        name: due-date-calculator-jar
+        path: target/due-date-calculator.jar
