@@ -39,4 +39,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: due-date-calculator-jar
-        path: target
+        path: target/due-date-calculator.jar
